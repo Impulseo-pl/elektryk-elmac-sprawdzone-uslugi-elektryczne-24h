@@ -200,7 +200,7 @@ h2 em,h1 em{font-style:normal;color:var(--accent-d)}
 .stats{display:grid;grid-template-columns:repeat(3, minmax(0, 1fr));gap:24px;margin:36px 0 40px;padding-top:30px;border-top:1px solid var(--line)}
 .stat b{display:block;font-family:var(--f-display);font-size:clamp(2.4rem, 1.6rem + 2.2vw, 3.6rem);font-weight:600;letter-spacing:-.045em;line-height:1;font-variant-numeric:tabular-nums}
 .stat b small{font-size:.5em;letter-spacing:-.02em;margin-left:4px;color:var(--accent-d)}
-.stat span{display:block;margin-top:10px;font-size:13.5px;line-height:1.45;color:var(--muted)}
+.stat > span{display:block;margin-top:10px;font-size:13.5px;line-height:1.45;color:var(--muted)}
 
 /* ---------- proces: przewód, który się zapala ---------- */
 .proces{background:var(--ink);color:var(--on-dark)}
@@ -388,7 +388,7 @@ h2 em,h1 em{font-style:normal;color:var(--accent-d)}
 .story-txt p:first-of-type{font-size:1.2rem;color:var(--text)}
 .numbers{display:grid;grid-template-columns:repeat(4, minmax(0, 1fr));gap:1px;background:var(--ink-line);border:1px solid var(--ink-line);border-radius:14px;overflow:hidden}
 .numbers .stat{background:var(--ink);padding:32px 28px}
-.numbers .stat span{color:var(--on-dark-2)}
+.numbers .stat > span{color:var(--on-dark-2)}
 .vals{display:grid;grid-template-columns:repeat(3, minmax(0, 1fr));gap:clamp(24px, 3vw, 48px);margin-top:clamp(56px, 7vw, 96px)}
 .val{padding-top:24px;border-top:1px solid var(--ink-line)}
 .val h3{font-size:1.45rem;margin-bottom:10px}
