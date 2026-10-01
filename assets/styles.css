@@ -124,7 +124,6 @@ h2 em,h1 em{font-style:normal;color:var(--accent-d)}
 .intro-on .znak .wm path{fill:var(--on-dark);fill-opacity:0;stroke:var(--accent);stroke-width:1.4px;vector-effect:non-scaling-stroke;stroke-dasharray:1;stroke-dashoffset:1;stroke-linejoin:round}
 .intro-on.intro-gra .znak .wm path{animation:wm-rysuj .7s cubic-bezier(.65,0,.35,1) forwards,wm-zapal .62s linear forwards;animation-delay:calc(var(--i) * 70ms),calc(.42s + var(--i) * 45ms)}
 .intro-on .znak.mierze .wm{position:static;width:100%;height:100%;transform:none;transition:none}
-.intro-on .brand-sub,.intro-on .nav-links,.intro-on .burger{visibility:hidden}
 @keyframes wm-rysuj{to{stroke-dashoffset:0}}
 @keyframes wm-zapal{0%{fill-opacity:0}18%{fill-opacity:.9}26%{fill-opacity:.15}40%{fill-opacity:1}52%{fill-opacity:.55}64%{fill-opacity:1;stroke-opacity:1}100%{fill-opacity:1;stroke-opacity:0}}
 
@@ -142,7 +141,7 @@ h2 em,h1 em{font-style:normal;color:var(--accent-d)}
 .anim .rv-img.is-in img{scale:1}
 
 /* ---------- hero ---------- */
-.hero{position:relative;display:flex;align-items:flex-end;min-height:640px;height:100vh;height:100svh;max-height:1180px;color:var(--on-dark);background:var(--ink);overflow:hidden}
+.hero{position:relative;display:flex;align-items:flex-end;min-height:100vh;min-height:100svh;color:var(--on-dark);background:var(--ink);overflow:hidden}
 .hero-media{position:absolute;inset:0}
 .hero-media img{width:100%;height:100%;object-fit:cover;object-position:60% 50%}
 .hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,16,19,.94) 0%,rgba(14,16,19,.82) 32%,rgba(14,16,19,.34) 64%,rgba(14,16,19,.12) 100%),linear-gradient(0deg,rgba(14,16,19,.9) 0%,rgba(14,16,19,0) 42%),linear-gradient(180deg,rgba(14,16,19,.6) 0%,rgba(14,16,19,0) 24%)}
@@ -332,7 +331,7 @@ h2 em,h1 em{font-style:normal;color:var(--accent-d)}
 .sticky-call{display:none}
 
 /* ---------- nagłówek podstrony ---------- */
-.pagehead{position:relative;display:flex;align-items:flex-end;min-height:560px;height:66vh;height:66svh;max-height:720px;color:var(--on-dark);background:var(--ink);overflow:hidden}
+.pagehead{position:relative;display:flex;align-items:flex-end;min-height:66vh;min-height:66svh;color:var(--on-dark);background:var(--ink);overflow:hidden}
 .pagehead-media{position:absolute;inset:0}
 .pagehead-media img{width:100%;height:100%;object-fit:cover}
 .pagehead-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,16,19,.92) 0%,rgba(14,16,19,.7) 45%,rgba(14,16,19,.3) 100%),linear-gradient(0deg,rgba(14,16,19,.85) 0%,rgba(14,16,19,0) 50%),linear-gradient(180deg,rgba(14,16,19,.6) 0%,rgba(14,16,19,0) 26%)}
@@ -471,6 +470,8 @@ html:not(.intro-on) .site-head{view-transition-name:naglowek}
   .foot-top{grid-template-columns:minmax(0, 1fr)}
   .extra-grid,.numbers{grid-template-columns:minmax(0, 1fr)}
   .hero-tag .muted,.hero-tag .sep{display:none}
+  .chips{display:none}
+  .pagehead{min-height:auto}
   .sticky-call{position:fixed;left:12px;right:12px;bottom:12px;z-index:90;display:grid;grid-template-columns:minmax(0, 1fr) minmax(0, 1fr);gap:8px;padding:8px;border-radius:999px;background:rgba(14,16,19,.94);border:1px solid var(--ink-line);transform:translateY(150%);transition:transform .6s var(--expo)}
   .sticky-call.is-on{transform:none}
   .sticky-call .btn{min-height:48px;padding:0 14px;font-size:14px}
