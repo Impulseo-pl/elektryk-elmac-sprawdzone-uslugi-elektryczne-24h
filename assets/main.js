@@ -52,7 +52,12 @@
   /* 3. Odsłanianie sekcji: obserwator + zapas przy przewijaniu + twardy bezpiecznik */
   try {
     var rv = [].slice.call(document.querySelectorAll('.rv'));
-    var odslon = function (el) { el.classList.add('is-in'); };
+    var odslon = function (el) {
+      if (el.classList.contains('is-in')) return;
+      el.classList.add('is-in');
+      var dl = parseInt(el.style.getPropertyValue('--d'), 10) || 0;
+      setTimeout(function () { el.classList.add('rv-done'); }, 1150 + dl);
+    };
     if (!d.classList.contains('anim')) {
       rv.forEach(odslon);
     } else {
